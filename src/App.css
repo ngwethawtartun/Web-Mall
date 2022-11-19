@@ -1,0 +1,24 @@
+.nav-color{
+  background-color: #142850;
+}
+.text-color{
+  color: #15c7f4;
+}
+.cart-color{
+  color:#15c7f4 ;
+}
+.hero-section{
+  background-color:  #e0edfa;
+}
+.count{
+  text-align: center;
+  font-size: 60px;
+  border-radius: 25px;
+  background: linear-gradient(#a9b4b5,#415756);
+  color:#162a29 ;
+  justify-content: center;
+}
+.timer{
+  margin-top: 8px;
+  
+}

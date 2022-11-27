@@ -1,5 +1,6 @@
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
+import Hero from "./components/Hero"
 import Home from "./pages/Home";
 import AllProducts from "./pages/AllProducts";
 //import Search from "./components/Search";
@@ -43,8 +44,25 @@ function App() {
           </div>
         </nav>
       </div>
+      <div
+        className="hero h-96   "
+        style={{
+          backgroundImage: `url("https://images.pexels.com/photos/8938734/pexels-photo-8938734.jpeg?cs=srgb&dl=pexels-leeloo-thefirst-8938734.jpg&fm=jpg&_gl=1*11fdvy9*_ga*MTQ0ODY1MTAxMC4xNjYxMTQ3NjIz*_ga_8JE65Q40S6*MTY2ODUyNTE0OC45LjEuMTY2ODUyNzA1NS4wLjAuMA..")`,
+        }}
+      >
+        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero-content text-center text-neutral-content">
+          <Hero />
+        </div>
+        <button className="btn btn-primary mt-52">
+         
+          <Link to="Allproducts">Buy Now</Link>
+        </button>
+      </div>
+
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/AllProducts" element={<AllProducts />} />
         <Route path="/AllProducts" element={<AllProducts />} />
       </Routes>
     </>

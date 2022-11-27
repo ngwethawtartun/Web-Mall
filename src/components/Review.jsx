@@ -45,18 +45,14 @@ const Review = () => {
     localStorage.setItem("reviews", JSON.stringify(reviews));
   }, [reviews]);
   return (
-    <div className="container mx-auto  flex  justify-around mt-20 table">
+    <div className="container mx-auto  flex  justify-around table mt-20">
       <div>
         <div className="text-center text-4xl">
           <h1>You can review here</h1>
         </div>
         <div className="flex justify-around mt-20">
           <div className="form-container">
-            <form
-              autoComplete="off"
-              className="shadow-lg "
-              onSubmit={handleAddReviewSubmit}
-            >
+            <form className="shadow-lg mb-12" onSubmit={handleAddReviewSubmit}>
               <div className="w-80 h-60">
                 <div className="mb-10">
                   <div className="ml-20 text-lg">
@@ -64,7 +60,7 @@ const Review = () => {
                   </div>
                   <input
                     type="text"
-                    className="input input-bordered input-sm mt-6 w-64"
+                    className="input input-sm mt-6 w-64 ml-5"
                     onChange={(e) => setName(e.target.value)}
                     value={name}
                   ></input>
@@ -76,13 +72,14 @@ const Review = () => {
                   </div>
                   <input
                     type="text"
-                    className="input input-bordered input-sm mt-6 w-64"
+                    className="input input-sm   mt-6 w-64 ml-5"
                     onChange={(e) => setDescription(e.target.value)}
                     value={description}
                   ></input>
                 </div>
               </div>
-              <button type="submit" className="card btn  w-44 ml-16">
+
+              <button type="submit" className=" btn  ml-16 w-40 mb-10">
                 ADD
               </button>
             </form>
@@ -114,7 +111,6 @@ const Review = () => {
                 </button>
               </>
             )}
-            {reviews.length < 1 && <div>No Reviewsare added yet</div>}
           </div>
         </div>
       </div>
